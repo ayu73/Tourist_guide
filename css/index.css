@@ -1,0 +1,151 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+	font-family: 'Mongolian Baiti','Sitka Subheading','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN',serif;
+}
+
+/* --- 共通設定 --- */
+
+header {
+    padding: 1%;
+    display: flex;
+    background-color: #fff;
+    opacity: 0.9;
+    justify-content: space-between;
+	padding: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    margin: 1%;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+a {
+    position: relative;
+    display: inline;
+    text-decoration: none;
+    color: black;
+}
+
+a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: scale(0,1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+a:hover::after {
+    transform: scale(1,1);
+}
+
+/* --- main --- */
+
+#main {
+    background-image: url(../img/background.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+
+}
+
+.text {
+    color: #fff;
+    font-size: 2.5em;
+    padding : 2%;
+}
+
+#img_text {
+    position: absolute;
+    top :70%; right: 5%; 
+    font-size: 5em;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main > p {
+        color: #fff;
+        font-size: 1.5em;
+        padding : 5%;
+    }
+
+    ul {
+        justify-content: right;
+    }
+
+    li {
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    #img_text {
+        position: absolute;
+        top :50%; left: 15%; 
+        font-size: 2.5em;
+    }
+    
+}
+
+
+/* --- SPOT --- */
+
+#spot {
+    background-image: url(../img/spot.jpg);
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+/* --- EVENT --- */
+
+#event {
+    background-image: url(../img/event.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+/* --- GOURMET --- */
+
+#gourmet{
+    background-image: url(../img/gourmet.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
+
+/* --- EXPERIENCE --- */
+
+#experience {
+    background-image: url(../img/experience.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+}
